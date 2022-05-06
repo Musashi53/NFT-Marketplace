@@ -241,7 +241,7 @@ button {
 }
 
 .home__content {
-  max-width: 340px;
+  width: 340px;
   display: flex;
   flex-direction: column;
 }
@@ -675,6 +675,8 @@ button {
     margin-top: 20rem;
   }
 
+  
+
 
   .hidden__card {
     overflow-x: unset;
@@ -699,5 +701,13 @@ button {
 @media screen and (min-width: 1268px) {
   .image__container {
     width: 40%;
+  }
+
+  .home {
+    margin-top: 25rem;
+  }
+
+  .home__content {
+    width: 700px;
   }
 }
