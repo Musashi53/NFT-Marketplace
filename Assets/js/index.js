@@ -1,5 +1,5 @@
 const navToggle = document.querySelector('.nav');
 
-function openCloseNav() {
-  navToggle.classList.add('.nav__open');
+function navOpen() {
+  navToggle.classList.toggle('open__nav');
 }
