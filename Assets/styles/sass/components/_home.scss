@@ -1,0 +1,39 @@
+/*============================== HOME ============================*/
+.home {
+  margin-top: 20rem;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home__content {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__title {
+  font-size: 1.5rem;
+  text-align: start;
+  margin-bottom: 3rem;
+}
+
+.home__subtitle {
+  font-size: .750rem;
+  display: block;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.learn__more {
+  margin-top: 4rem;
+}
+
+.learn__more-link {
+  font-size: .8rem;
+  display: inline-flex;
+  align-items: center;
+}

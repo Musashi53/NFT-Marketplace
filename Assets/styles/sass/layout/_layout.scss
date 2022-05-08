@@ -1,0 +1,30 @@
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.section__title {
+  margin-top: 4rem;
+}
+
+.view__all {
+  font-weight: 900;
+  background: var(--color-primary);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 4rem;
+}
+
+.section__principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}

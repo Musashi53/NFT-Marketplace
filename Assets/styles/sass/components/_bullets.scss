@@ -1,0 +1,31 @@
+.bullets__container {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bullets__content {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.bullet__image {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.bullet__title {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bullet__description {
+  text-align: justify;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
