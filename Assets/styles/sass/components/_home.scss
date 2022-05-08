@@ -10,7 +10,6 @@
 }
 
 .home__content {
-  width: 340px;
   display: flex;
   flex-direction: column;
 }
@@ -26,6 +25,10 @@
   display: block;
   margin-bottom: 1rem;
   color: #ccc;
+}
+
+.home .button__default {
+  margin-bottom: 1rem;
 }
 
 .learn__more {

@@ -1,6 +1,9 @@
+@import '../config/variables';
+
 /*============================== FOOTER ============================*/
 .footer {
   margin-top: 6rem;
+  background-color: #1b1825;
 }
 
 .footer__container {
@@ -37,7 +40,7 @@
 
 .footer__list__title {
   font-size: 1rem;
-  background: var(--color-primary);
+  background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -69,7 +72,7 @@
   position: relative;
   box-sizing: border-box;
   color: #FFF;
-  background: #202020;
+  background: #211e2e;
   background-clip: padding-box;
   border: solid 2px transparent; 
   border-radius: .5rem;
@@ -85,12 +88,12 @@
   z-index: -1;
   margin: -2px;
   border-radius: inherit;
-  background: var(--color-primary);
+  background: var(--primary-color);
 }
 
 .social__icon {
   font-size: 2rem;
-  background: var(--color-primary);
+  background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;

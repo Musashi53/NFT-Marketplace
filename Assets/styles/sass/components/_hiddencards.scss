@@ -23,7 +23,7 @@
   margin-left: .2rem;
   position: relative;
   box-sizing: border-box;
-  background: #202020;
+  background: #211e2e;
   background-clip: padding-box;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -39,7 +39,7 @@
   z-index: -1;
   margin: -2px;
   border-radius: inherit;
-  background: var(--color-primary);
+  background: var(--primary-color);
 }
 
 .card__images {
