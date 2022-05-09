@@ -7,24 +7,24 @@
 .section {
   margin-bottom: 3rem;
   margin-top: 3rem;
-}
 
-.section__title {
-  margin-top: 4rem;
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  &__title {
+    margin-top: 4rem;
+  }
 }
 
 .view__all {
   font-weight: 900;
-  background: var(--color-primary);
+  background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   margin-top: 4rem;
-}
-
-.section__principal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.25rem;
 }

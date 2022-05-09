@@ -1,46 +1,101 @@
-@import '../config/variables.scss';
 
-.button__default {
-  position: relative;
-  box-sizing: border-box;
+button {
   color: #FFF;
-  background: #211e2e;
-  background-clip: padding-box;
-  border: solid 2px transparent; 
-  border-radius: 2em;
-  
-}
-
-.button__default::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -2px;
-  border-radius: inherit;
-  background: var(--primary-color);
-}
-
-.button__primary {
-  background-image: var(--primary-color);
-  border: none;
-  border-radius: 2.5rem;
-}
-
-.hamburguer__button {
   cursor: pointer;
+  font-weight: 900;
 }
 
-.hamburguer__icon {
-  font-size: 3.5rem;
-  background: var(--primary-color);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+.button {
+  &__header__primary {
+    padding: .6rem 2rem .6rem 2rem;
+    background-image: var(--primary-color);
+    border: none;
+    border-radius: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__header__default {
+    padding: .6rem 2rem .5rem 2rem;
+    position: relative;
+    color: #FFF;
+    background: #211e2e;
+    background-clip: padding-box;
+    border: solid 2px transparent; 
+    border-radius: 2em;
+    margin-right: 1rem;
+  }
+
+  &__header__default::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: var(--primary-color);
+  }
+
+  &__primary {
+    width: 150px;
+    padding: 1rem 0 1rem 0;
+    background-image: var(--primary-color);
+    border: none;
+    border-radius: 2.5rem;
+  }
+
+  &__default {
+    width: 150px;
+    padding: .9rem 0 .9rem 0;
+    position: relative;
+    color: #FFF;
+    background: #211e2e;
+    background-clip: padding-box;
+    border: solid 2px transparent; 
+    border-radius: 2em;
+  }
+
+  &__default::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: var(--primary-color);
+  }
+
+  &__icon {
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
 }
+
+
+
+
+
+.hamburguer {
+  &__button {
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: 3.5rem;
+    background: var(--primary-color);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+
 
 .icon {
   font-size: 1.25rem;

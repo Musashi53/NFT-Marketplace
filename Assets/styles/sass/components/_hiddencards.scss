@@ -1,61 +1,60 @@
 /*============================== HIDDEN GEMS ============================*/
 .hidden {
-  
+  &__cards {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  &__cards::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__card {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem .75rem;
+    border-radius: 2rem;
+    margin-right: 1.25rem;
+    margin-left: .2rem;
+    position: relative;
+    background: #211e2e;
+    background-clip: padding-box;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: var(--primary-color);
+  }
 }
 
-.hidden__cards {
-  display: flex;
-  overflow-x: auto;
+.card {
+  &__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  &__user {
+    width: 40px;
+    position: absolute;
+    bottom: -1rem; 
+  }
 }
 
-.hidden__cards::-webkit-scrollbar {
-  width: 0;
-}
-
-.hidden__card {
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.25rem .75rem;
-  border-radius: 2rem;
-  margin-right: 1.25rem;
-  margin-left: .2rem;
-  position: relative;
-  box-sizing: border-box;
-  background: #211e2e;
-  background-clip: padding-box;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.hidden__card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -2px;
-  border-radius: inherit;
-  background: var(--primary-color);
-}
-
-.card__images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.card__user {
-  width: 40px;
-  position: absolute;
-  bottom: -1rem;
-  
-}
 
 .card__title {
   text-align: center;
@@ -68,9 +67,10 @@
 }
 
 .card__subtitle--user {
-  color: #73E0A9;
+  color: var(--secondary-color);
 }
 
 .card__description {
   text-align: justify;
+  font-size: var(--normal-font-size);
 }

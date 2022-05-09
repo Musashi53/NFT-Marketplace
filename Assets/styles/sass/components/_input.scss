@@ -3,24 +3,13 @@
   height: 2rem;
   padding-left: 2rem;
   font-size: 1rem;
-  position: relative;
-  box-sizing: border-box;
   color: #FFF;
   background: transparent;
-  background-clip: padding-box;
-  border: solid 2px #5B68DF; 
-  border-radius: 2em;
-}
+  outline: none;
 
-.input::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -5px;
-  border-radius: inherit;
-  background: var(--color-primary);
+  border: double 2px transparent;
+  border-radius: 1rem;
+  background-image: linear-gradient(var(--body-color), var(--body-color)), var(--primary-color);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
