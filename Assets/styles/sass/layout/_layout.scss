@@ -1,12 +1,12 @@
 .container {
   max-width: 968px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
 
 .section {
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  margin-bottom: var(--mb-3);
+  margin-top: var(--mb-3);
 
   &__main {
     display: flex;
@@ -17,11 +17,12 @@
 
   &__title {
     margin-top: 4rem;
+    font-size: var(--title-font-size);
   }
 }
 
 .view__all {
-  font-weight: 900;
+  font-weight: var(--font-bold);
   background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;

@@ -1,22 +1,22 @@
-
 button {
+  font-weight: var(--font-bold);
   color: #FFF;
   cursor: pointer;
-  font-weight: 900;
 }
 
 .button {
   &__header__primary {
-    padding: .6rem 2rem .6rem 2rem;
+    padding: .5rem 2rem .5rem 2rem;
     background-image: var(--primary-color);
     border: none;
     border-radius: 2.5rem;
     display: flex;
     align-items: center;
+
   }
 
   &__header__default {
-    padding: .6rem 2rem .5rem 2rem;
+    padding: .4rem 2rem .4rem 2rem;
     position: relative;
     color: #FFF;
     background: #211e2e;
@@ -41,7 +41,8 @@ button {
 
   &__primary {
     width: 150px;
-    padding: 1rem 0 1rem 0;
+    font-size: var(--normal-font-size);
+    padding: .9rem 0 .9rem 0;
     background-image: var(--primary-color);
     border: none;
     border-radius: 2.5rem;
@@ -49,7 +50,8 @@ button {
 
   &__default {
     width: 150px;
-    padding: .9rem 0 .9rem 0;
+    font-size: var(--normal-font-size);
+    padding: .8rem 0 .8rem 0;
     position: relative;
     color: #FFF;
     background: #211e2e;

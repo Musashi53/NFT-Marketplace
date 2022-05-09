@@ -6,10 +6,11 @@
 .card__collections {
   display: flex;
   overflow-x: auto;
-}
 
-.card__collections::-webkit-scrollbar {
-  width: 0;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }
 
 .card__collection {
@@ -26,67 +27,65 @@
   background-clip: padding-box;
   border: solid 2px transparent; 
   border-radius: 1em;
-}
 
-.card__collection::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -2px;
-  border-radius: inherit;
-  background: var(--primary-color);
-}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: var(--primary-color);
+  }
 
-.card__collection__content {
-  width: 90%;
-  background-color: #040425;
-  border-radius: 0 0 1rem 1rem;
-  margin-bottom: 1.5rem;
-}
+  &__image {
+    border-radius: 1rem 1rem 0 0;
+  }
 
-.card__collection__image {
-  border-radius: 1rem 1rem 0 0;
-}
+  &__container {
+    width: 90%;
+    background-color: #040425;
+    border-radius: 0 0 1rem 1rem;
+    margin-bottom: 1.5rem;
+  }
 
-.card__collection__description {
-  height: 5rem;
-  border-bottom: 1px solid #73E0A9;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
+  &__content {
+    height: 5rem;
+    border-bottom: 1px solid #73E0A9;
+    display: flex;
+    align-items: center;
+  }
 
-.card__collection__naosei {
+  &__title {
+    font-size: .75rem;
+  }
+
+  &__subtitle {
+    font-size: .6rem;
+  }
+
+  &__image__user {
+    width: 30px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  &__price__content {
+    padding: .5rem;
+    margin-left: var(--mb-1);
+  }
+
+  &__price__title {
+    margin-bottom: .5rem;
+    font-size: .8rem;
+    font-weight: lighter;
+  }
   
-}
-
-.card__collection__title {
-  font-size: .75rem;
-}
-
-.card__collection__subtitle {
-  font-size: .5rem;
-}
-
-.card__collection__image--user {
-  width: 40px;
-}
-
-.card__collection_price__content {
-  padding: .5rem;
-}
-
-.card__collection__price--title {
-  margin-bottom: .5rem;
-  font-size: .8rem;
-  font-weight: lighter;
-}
-
-.card__collection__price {
-  font-size: 1rem;
-  font-weight: bold;
+  &__price {
+    font-size: 1rem;
+    font-weight: bold;
+  }
 }

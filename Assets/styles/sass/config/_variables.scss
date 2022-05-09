@@ -1,27 +1,56 @@
 :root {
-  /*============================== FONT ==============================*/
   --primary-color: linear-gradient(to right, rgb(115, 224, 169) 0% , rgb(91, 104, 223) 100%);
-  --secondary-color: linear-gradient(to right, rgb(74, 143, 148) 0%, rgb(91, 104, 223) 100%);
+  --secondary-color: linear-gradient(to right, rgb(106, 199, 206) 0%, rgb(103, 117, 248) 100%);
   --body-color: rgb(33, 30, 46);
-
-  /*============================== FONT ==============================*/
-
-  /*============================== FONT ==============================*/
+  --glass-color: rgba(255, 255, 255, 0.01);
+  --scroll-bar-color: rgb(59, 53, 80);
+  --scroll-thumb-color: rgb(38, 33, 51);
 
   /*========== Font and typography ==========*/
+  --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --title-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --small-font-size: .75rem;
   --smaller-font-size: .5rem;
 
-  /*============================== MARGINS BOTTOM ==============================*/
+  /* 0.5rem = 8px, 1rem = 16px, 1.5rem = 24px ...*/
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-light: 300;
+  --font-bold: 900;
+
+  /*========== Margins Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ...*/
+  --mb-0-25: .25rem;
+  --mb-0-50: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
-@media screen and (min-width: 1028px) {
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
   :root {
-    --title-font-size: 2rem;
-    --normal-font-size: .900rem;
-    --small-font-size: .75rem;
+      --title-font-size: 2rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
   }
-  
 }

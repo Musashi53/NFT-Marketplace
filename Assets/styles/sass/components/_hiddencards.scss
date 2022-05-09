@@ -7,6 +7,7 @@
 
   &__cards::-webkit-scrollbar {
     width: 0;
+    height: 0;
   }
 
   &__card {
@@ -19,10 +20,10 @@
     margin-right: 1.25rem;
     margin-left: .2rem;
     position: relative;
-    background: #211e2e;
+    background: var(--body-color);
     background-clip: padding-box;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: var(--mb-1);
+    margin-bottom: var(--mb-1);
   }
 
   &__card::before {
@@ -45,7 +46,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: var(--mb-2);
   }
 
   &__user {
@@ -53,24 +54,29 @@
     position: absolute;
     bottom: -1rem; 
   }
-}
 
+  &__title {
+    text-align: center;
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-50);
+  }
+  
+  &__subtitle {
+    font-size: var(--normal-font-size);
+    display: block;
+    text-align: center;
+    margin-bottom: var(--mb-1);
 
-.card__title {
-  text-align: center;
-}
+    &__user {
+      background: var(--secondary-color);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
 
-.card__subtitle {
-  display: block;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.card__subtitle--user {
-  color: var(--secondary-color);
-}
-
-.card__description {
-  text-align: justify;
-  font-size: var(--normal-font-size);
+  &__description {
+    text-align: justify;
+    font-size: var(--normal-font-size);
+  }
 }

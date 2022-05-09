@@ -1,23 +1,52 @@
 :root {
-  /*============================== FONT ==============================*/
   --primary-color: linear-gradient(to right, rgb(115, 224, 169) 0% , rgb(91, 104, 223) 100%);
-  --secondary-color: linear-gradient(to right, rgb(74, 143, 148) 0%, rgb(91, 104, 223) 100%);
+  --secondary-color: linear-gradient(to right, rgb(106, 199, 206) 0%, rgb(103, 117, 248) 100%);
   --body-color: rgb(33, 30, 46);
-  /*============================== FONT ==============================*/
-  /*============================== FONT ==============================*/
+  --glass-color: rgba(255, 255, 255, 0.01);
+  --scroll-bar-color: rgb(59, 53, 80);
+  --scroll-thumb-color: rgb(38, 33, 51);
   /*========== Font and typography ==========*/
+  --body-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --title-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --small-font-size: .75rem;
   --smaller-font-size: .5rem;
-  /*============================== MARGINS BOTTOM ==============================*/
+  /* 0.5rem = 8px, 1rem = 16px, 1.5rem = 24px ...*/
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  /*========== Font weight ==========*/
+  --font-light: 300;
+  --font-bold: 900;
+  /*========== Margins Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ...*/
+  --mb-0-25: .25rem;
+  --mb-0-50: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
-@media screen and (min-width: 1028px) {
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
   :root {
     --title-font-size: 2rem;
-    --normal-font-size: .900rem;
-    --small-font-size: .75rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
   }
 }
 *,
@@ -33,17 +62,21 @@ html {
 }
 
 body {
-  background-color: rgb(33, 30, 46);
+  background-color: var(--body-color);
   background-image: url("../../Img/globe.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 80%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin: 1rem 0 0 0;
+  font-family: var(--body-font);
 }
 
 h1, h2, p, span, a, div {
   color: #FFF;
+}
+
+p {
+  font-size: var(--normal-font-size);
+  line-height: 1.25rem;
 }
 
 a {
@@ -58,15 +91,26 @@ img {
   width: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
+
 .container {
   max-width: 968px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
 
 .section {
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  margin-bottom: var(--mb-3);
+  margin-top: var(--mb-3);
 }
 .section__main {
   display: flex;
@@ -76,10 +120,11 @@ img {
 }
 .section__title {
   margin-top: 4rem;
+  font-size: var(--title-font-size);
 }
 
 .view__all {
-  font-weight: 900;
+  font-weight: var(--font-bold);
   background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;
@@ -103,38 +148,38 @@ img {
 .home__title {
   font-size: var(--title-font-size);
   text-align: start;
-  margin-bottom: 3rem;
+  margin-bottom: var(--mb-3);
 }
 .home__subtitle {
-  font-size: 0.75rem;
+  font-size: var(--small-font-size);
   display: block;
-  margin-bottom: 1rem;
-  color: #ccc;
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-light);
 }
 
 .home .button__default {
-  margin-bottom: 1rem;
+  margin-bottom: var(--mb-1);
 }
 
 .learn__more {
   margin-top: 4rem;
 }
 .learn__more__link {
-  font-size: 0.8rem;
+  font-size: var(--small-font-size);
   display: inline-flex;
   align-items: center;
 }
 
 /*============================== HEADER ============================*/
 .header {
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: var(--glass-color);
   backdrop-filter: blur(10px);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: var(--mb-0-50);
+  padding-bottom: var(--mb-0-50);
 }
 .header__content {
   display: flex;
@@ -184,6 +229,7 @@ img {
 }
 .hidden__cards::-webkit-scrollbar {
   width: 0;
+  height: 0;
 }
 .hidden__card {
   min-width: 300px;
@@ -195,10 +241,10 @@ img {
   margin-right: 1.25rem;
   margin-left: 0.2rem;
   position: relative;
-  background: #211e2e;
+  background: var(--body-color);
   background-clip: padding-box;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-1);
 }
 .hidden__card::before {
   content: "";
@@ -218,28 +264,30 @@ img {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: var(--mb-2);
 }
 .card__user {
   width: 40px;
   position: absolute;
   bottom: -1rem;
 }
-
 .card__title {
   text-align: center;
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-50);
 }
-
 .card__subtitle {
+  font-size: var(--normal-font-size);
   display: block;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--mb-1);
 }
-
-.card__subtitle--user {
-  color: var(--secondary-color);
+.card__subtitle__user {
+  background: var(--secondary-color);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
-
 .card__description {
   text-align: justify;
   font-size: var(--normal-font-size);
@@ -250,9 +298,9 @@ img {
   display: flex;
   overflow-x: auto;
 }
-
 .card__collections::-webkit-scrollbar {
   width: 0;
+  height: 0;
 }
 
 .card__collection {
@@ -270,7 +318,6 @@ img {
   border: solid 2px transparent;
   border-radius: 1em;
 }
-
 .card__collection::before {
   content: "";
   position: absolute;
@@ -283,48 +330,41 @@ img {
   border-radius: inherit;
   background: var(--primary-color);
 }
-
-.card__collection__content {
+.card__collection__image {
+  border-radius: 1rem 1rem 0 0;
+}
+.card__collection__container {
   width: 90%;
   background-color: #040425;
   border-radius: 0 0 1rem 1rem;
   margin-bottom: 1.5rem;
 }
-
-.card__collection__image {
-  border-radius: 1rem 1rem 0 0;
-}
-
-.card__collection__description {
+.card__collection__content {
   height: 5rem;
   border-bottom: 1px solid #73E0A9;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
 }
-
 .card__collection__title {
   font-size: 0.75rem;
 }
-
 .card__collection__subtitle {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
-
-.card__collection__image--user {
-  width: 40px;
+.card__collection__image__user {
+  width: 30px;
+  margin-left: var(--mb-1);
+  margin-right: var(--mb-1);
 }
-
-.card__collection_price__content {
+.card__collection__price__content {
   padding: 0.5rem;
+  margin-left: var(--mb-1);
 }
-
-.card__collection__price--title {
+.card__collection__price__title {
   margin-bottom: 0.5rem;
   font-size: 0.8rem;
   font-weight: lighter;
 }
-
 .card__collection__price {
   font-size: 1rem;
   font-weight: bold;
@@ -336,115 +376,76 @@ img {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .bullets__content {
   width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--mb-2);
 }
-
-.bullet__image {
+.bullets__image {
   width: 80px;
-  margin-bottom: 1rem;
+  margin-bottom: var(--mb-1);
 }
-
-.bullet__title {
+.bullets__title {
   text-align: center;
-  font-size: 1rem;
+  font-size: var(--normal-font-size);
   margin-bottom: 1rem;
 }
-
-.bullet__description {
+.bullets__description {
   text-align: justify;
-  font-weight: 300;
-  margin-bottom: 1rem;
+  font-weight: var(--font-light);
+  margin-bottom: var(--mb-1);
 }
 
-:root {
-  /*============================== FONT ==============================*/
-  --primary-color: linear-gradient(to right, rgb(115, 224, 169) 0% , rgb(91, 104, 223) 100%);
-  --secondary-color: linear-gradient(to right, rgb(74, 143, 148) 0%, rgb(91, 104, 223) 100%);
-  --body-color: rgb(33, 30, 46);
-  /*============================== FONT ==============================*/
-  /*============================== FONT ==============================*/
-  /*========== Font and typography ==========*/
-  --title-font-size: 1.5rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .75rem;
-  --smaller-font-size: .5rem;
-  /*============================== MARGINS BOTTOM ==============================*/
-}
-
-@media screen and (min-width: 1028px) {
-  :root {
-    --title-font-size: 2rem;
-    --normal-font-size: .900rem;
-    --small-font-size: .75rem;
-  }
-}
 /*============================== FOOTER ============================*/
 .footer {
   margin-top: 6rem;
-  background-color: #1b1825;
+  background-color: rgb(27, 24, 37);
 }
-
 .footer__container {
   display: flex;
   flex-direction: column;
 }
-
 .footer__content {
   width: 250px;
   margin-bottom: 4rem;
   margin-top: 6rem;
 }
-
 .footer__image {
   width: 70px;
   margin-bottom: 0.75rem;
 }
-
 .footer__title {
   margin-bottom: 1rem;
+  font-size: var(--h2-font-size);
 }
-
 .footer__description {
   text-align: justify;
 }
-
 .footer__list__container {
   margin-bottom: 2rem;
 }
-
 .footer__list__content {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-
 .footer__list__title {
-  font-size: 1rem;
+  font-size: var(--normal-font-size);
   background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   margin-bottom: 0.5rem;
 }
-
+.footer__list__link {
+  margin-bottom: 0.75rem;
+}
+.footer__list__link a {
+  font-size: var(--small-font-size);
+}
 .footer__socials {
   width: 150px;
 }
-
-.socials__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer__list__link {
-  margin-bottom: 0.25rem;
-}
-
 .footer__button {
   display: flex;
   width: 40px;
@@ -453,14 +454,11 @@ img {
   align-items: center;
   margin-bottom: 1rem;
   position: relative;
-  box-sizing: border-box;
-  color: #FFF;
-  background: #211e2e;
+  background: var(--body-color);
   background-clip: padding-box;
   border: solid 2px transparent;
   border-radius: 0.5rem;
 }
-
 .footer__button::before {
   content: "";
   position: absolute;
@@ -473,20 +471,25 @@ img {
   border-radius: inherit;
   background: var(--primary-color);
 }
-
-.social__icon {
-  font-size: 2rem;
+.footer__button i {
+  font-size: 1.5rem;
   background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
+.socials__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .input {
   width: 60%;
   height: 2rem;
   padding-left: 2rem;
-  font-size: 1rem;
+  font-size: var(--normal-font-size);
   color: #FFF;
   background: transparent;
   outline: none;
@@ -498,13 +501,13 @@ img {
 }
 
 button {
+  font-weight: var(--font-bold);
   color: #FFF;
   cursor: pointer;
-  font-weight: 900;
 }
 
 .button__header__primary {
-  padding: 0.6rem 2rem 0.6rem 2rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
   background-image: var(--primary-color);
   border: none;
   border-radius: 2.5rem;
@@ -512,7 +515,7 @@ button {
   align-items: center;
 }
 .button__header__default {
-  padding: 0.6rem 2rem 0.5rem 2rem;
+  padding: 0.4rem 2rem 0.4rem 2rem;
   position: relative;
   color: #FFF;
   background: #211e2e;
@@ -535,14 +538,16 @@ button {
 }
 .button__primary {
   width: 150px;
-  padding: 1rem 0 1rem 0;
+  font-size: var(--normal-font-size);
+  padding: 0.9rem 0 0.9rem 0;
   background-image: var(--primary-color);
   border: none;
   border-radius: 2.5rem;
 }
 .button__default {
   width: 150px;
-  padding: 0.9rem 0 0.9rem 0;
+  font-size: var(--normal-font-size);
+  padding: 0.8rem 0 0.8rem 0;
   position: relative;
   color: #FFF;
   background: #211e2e;
@@ -597,11 +602,6 @@ button {
     width: 80%;
   }
 }
-@media screen and (min-width: 400px) {
-  .home__content {
-    width: 70%;
-  }
-}
 @media screen and (min-width: 568px) {
   body {
     background-size: 60%;
@@ -611,12 +611,16 @@ button {
     width: 300px;
   }
 
+  .home__content {
+    width: 70%;
+  }
+
   .home__content--image {
     width: 40%;
   }
 
   .button__default {
-    margin-right: 1rem;
+    margin-right: var(--mb-1);
   }
 
   .bullets__container {
@@ -633,7 +637,7 @@ button {
   }
 
   .footer__content {
-    margin-bottom: 3rem;
+    margin-bottom: var(--mb-3);
   }
 
   .footer__list__container {
@@ -653,7 +657,7 @@ button {
   }
 
   .input {
-    margin-left: 2rem;
+    margin-left: var(--mb-2);
   }
 
   .card__collections {
@@ -665,7 +669,7 @@ button {
   }
 
   .card__collection {
-    margin-right: 1rem;
+    margin-right: var(--mb-1);
     width: 31%;
   }
 
@@ -706,14 +710,12 @@ button {
     align-items: center;
     width: 600px;
   }
-
   .nav__list {
     flex-direction: row;
     height: 100%;
     width: 250px;
     justify-content: space-between;
   }
-
   .nav__buttons {
     flex-direction: row;
     height: 100%;
@@ -725,7 +727,6 @@ button {
     overflow-x: unset;
     margin-right: 0.1rem;
   }
-
   .hidden__cards {
     justify-content: space-between;
   }
@@ -734,7 +735,6 @@ button {
     justify-content: space-between;
     margin-right: 0;
   }
-
   .card__collection {
     width: 220px;
     margin-right: 0;
@@ -743,7 +743,6 @@ button {
   .footer__links__container {
     display: flex;
   }
-
   .footer__list__container {
     margin-right: 4rem;
   }

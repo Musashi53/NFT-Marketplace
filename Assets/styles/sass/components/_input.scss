@@ -2,11 +2,10 @@
   width: 60%;
   height: 2rem;
   padding-left: 2rem;
-  font-size: 1rem;
+  font-size: var(--normal-font-size);
   color: #FFF;
   background: transparent;
   outline: none;
-
   border: double 2px transparent;
   border-radius: 1rem;
   background-image: linear-gradient(var(--body-color), var(--body-color)), var(--primary-color);

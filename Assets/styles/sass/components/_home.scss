@@ -16,26 +16,26 @@
   &__title {
     font-size: var(--title-font-size);
     text-align: start;
-    margin-bottom: 3rem;
+    margin-bottom: var(--mb-3);
   }
 
   &__subtitle {
-    font-size: .750rem;
+    font-size: var(--small-font-size);
     display: block;
-    margin-bottom: 1rem;
-    color: #ccc;
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-light);
   }
 }
 
 .home .button__default {
-  margin-bottom: 1rem;
+  margin-bottom: var(--mb-1);
 }
 
 .learn__more {
   margin-top: 4rem;
 
   &__link {
-    font-size: .8rem;
+    font-size: var(--small-font-size);
     display: inline-flex;
     align-items: center;
   }
