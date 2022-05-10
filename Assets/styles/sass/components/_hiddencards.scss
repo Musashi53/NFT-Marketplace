@@ -2,23 +2,17 @@
 .hidden {
   &__cards {
     display: flex;
-    overflow-x: auto;
-  }
-
-  &__cards::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__card {
-    min-width: 300px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1.25rem .75rem;
-    border-radius: 2rem;
-    margin-right: 1.25rem;
-    margin-left: .2rem;
+    border-radius: 2rem; 
     position: relative;
     background: var(--body-color);
     background-clip: padding-box;

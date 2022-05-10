@@ -1,26 +1,17 @@
 /*============================== TOP COLLECTIONS ============================*/
-.collection {
-  
-}
-
 .card__collections {
   display: flex;
-  overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
+  flex-direction: column;
+  align-items: center;
 }
 
 .card__collection {
-  min-width: 200px;
+  width: 250px;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
-  margin-right: 1rem;
   position: relative;
   color: #FFF;
   background: #211e2e;
