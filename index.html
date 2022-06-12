@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/Assets/styles/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <script src="/Assets/js/index.js" defer></script>
+    
     
   </head>
 
@@ -40,7 +40,7 @@
       
     </header>
 
-    <main>
+    <mainc class="main">
       <section class="section home">
         <div class="home__container container">
           <div class="home__content">
@@ -70,50 +70,53 @@
             <h1 class="section__title">Hidden Gems</h1>
             <a class="view__all" href="#">View All</a>
           </div>
-  
-          <div class="hidden__cards">
-            <div class="hidden__card">
-              <div class="card__images">
-                <img src="/Assets/Img/gem_1.png" alt="">
-                <img class="card__user" src="/Assets/Img/card_use_1.png" alt="">
+
+          <div class="hidden__content">
+            <div class="hidden__cards">
+              <div class="hidden__card">
+                <div class="hidden__card__images">
+                  <img class="hidden__card__image" src="/Assets/Img/gem_1.png" alt="">
+                  <img class="hidden__card__user" src="/Assets/Img/card_use_1.png" alt="">
+                </div>
+                <div>
+                  <h2 class="hidden__card__title">ZombieClub Token</h2>
+                  <span class="hidden__card__subtitle">Created by <span class="hidden__card__subtitle__user">ZombieLab</span></span>
+                  <p class="hidden__card__description">
+                    Zombie Las is a collection of 10,000 animated NFTs. Each NFT is unique and resides on the Ethereum blockchain. Your Zombie Lab Club NFT will double as your club membership.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h2 class="card__title">ZombieClub Token</h2>
-                <span class="card__subtitle">Created by <span class="card__subtitle__user">ZombieLab</span></span>
-                <p class="card__description">
-                  Zombie Las is a collection of 10,000 animated NFTs. Each NFT is unique and resides on the Ethereum blockchain. Your Zombie Lab Club NFT will double as your club membership.
-                </p>
+    
+              <div class="hidden__card">
+                <div class="hidden__card__images">
+                  <img class="hidden__card__image" src="/Assets/Img/gem_2.png" alt="">
+                  <img class="hidden__card__user" src="/Assets/Img/card_user_2.png" alt="">
+                </div>
+                <div>
+                  <h2 class="hidden__card__title">Meta Bounty Hunters</h2>
+                  <span class="hidden__card__subtitle">Created by <span class="hidden__card__subtitle__user">B30898</span></span>
+                  <p class="hidden__card__description">
+                    Meta Bounty Hunters is a first of its kind community and collective of elite members who share a community-first mindset and are focused on giving back to its NFT holders through the Reflection Rewards.
+                  </p>
+                </div>
               </div>
-            </div>
-  
-            <div class="hidden__card">
-              <div class="card__images">
-                <img src="/Assets/Img/gem_2.png" alt="">
-                <img class="card__user" src="/Assets/Img/card_user_2.png" alt="">
-              </div>
-              <div>
-                <h2 class="card__title">Meta Bounty Hunters</h2>
-                <span class="card__subtitle">Created by <span class="card__subtitle__user">B30898</span></span>
-                <p class="card__description">
-                  Meta Bounty Hunters is a first of its kind community and collective of elite members who share a community-first mindset and are focused on giving back to its NFT holders through the Reflection Rewards.
-                </p>
-              </div>
-            </div>
-  
-            <div class="hidden__card">
-              <div class="card__images">
-                <img src="/Assets/Img/gem_3.png" alt="">
-                <img class="card__user" src="/Assets/Img/card_user_3.png" alt="">
-              </div>
-              <div>
-                <h2 class="card__title">Treeverse Plots</h2>
-                <span class="card__subtitle">Created by <span class="card__subtitle__user">Treeverse_Wallet</span></span>
-                <p class="card__description">
-                  Treeverse is an open-world, fantasy MMORPG th a MOBA-style combat system. Slay beats, forge mighty weapons, lure the biggest fish, form guilds, defeat dungeons.
-                </p>
+    
+              <div class="hidden__card">
+                <div class="hidden__card__images">
+                  <img src="/Assets/Img/gem_3.png" alt="">
+                  <img class="hidden__card__user" src="/Assets/Img/card_user_3.png" alt="">
+                </div>
+                <div>
+                  <h2 class="hidden__card__title">Treeverse Plots</h2>
+                  <span class="hidden__card__subtitle">Created by <span class="hidden__card__subtitle__user">Treeverse_Wallet</span></span>
+                  <p class="hidden__card__description">
+                    Treeverse is an open-world, fantasy MMORPG th a MOBA-style combat system. Slay beats, forge mighty weapons, lure the biggest fish, form guilds, defeat dungeons.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+          
         </div>
         
       </section>
@@ -266,10 +269,10 @@
       </section>
 
       <section class="section bullets">
-        <div class="container">
+        <div class="bullets__container container">
           <h1 class="section__title">Create and sell your NFTs</h1>
-          <div class="bullets__container">
-            <div class="bullets__content">
+          <div class="bullets__cards">
+            <div class="bullets__card">
               <img class="bullets__image" src="/Assets/Img/folder.png" alt="folder_img">
               <h3 class="bullets__title">Set up your wallet</h3>
               <p class="bullets__description">
@@ -277,7 +280,7 @@
               </p>
             </div>
 
-            <div class="bullets__content">
+            <div class="bullets__card">
               <svg class="bullets__image" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 38.6667C6 37.5622 6.89543 36.6667 8 36.6667H26.6667C27.7712 36.6667 28.6667 37.5622 28.6667 38.6667V57.3334C28.6667 58.438 27.7712 59.3334 26.6667 59.3334H8C6.89543 59.3334 6 58.438 6 57.3334V38.6667ZM10 40.6667V55.3334H24.6667V40.6667H10Z" fill="url(#paint0_linear_41_198)"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M32 3.33325C32.7087 3.33325 33.3645 3.70833 33.7239 4.31921L47.0572 26.9859C47.421 27.6043 47.4256 28.3701 47.0694 28.9929C46.7132 29.6156 46.0508 29.9999 45.3333 29.9999H18.6667C17.9492 29.9999 17.2868 29.6156 16.9306 28.9929C16.5744 28.3701 16.579 27.6043 16.9428 26.9859L30.2761 4.31921C30.6355 3.70833 31.2913 3.33325 32 3.33325ZM22.1635 25.9999H41.8365L32 9.27787L22.1635 25.9999Z" fill="url(#paint1_linear_41_198)"/>
@@ -303,7 +306,7 @@
               </p>
             </div>
 
-            <div class="bullets__content">
+            <div class="bullets__card">
               <img class="bullets__image" src="/Assets/Img/picture.png" alt="picture">
               <h3 class="bullets__title">Add your NFTs</h3>
               <p class="bullets__description">
@@ -311,7 +314,7 @@
               </p>
             </div>
 
-            <div class="bullets__content">
+            <div class="bullets__card">
               <svg class="bullets__image" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14386 21.3702C5.52386 20.9239 6.08051 20.6667 6.66667 20.6667H57.3333C57.9195 20.6667 58.4761 20.9239 58.8561 21.3702C59.2361 21.8165 59.4012 22.407 59.3077 22.9857L53.7077 57.6524C53.5512 58.6213 52.7148 59.3334 51.7333 59.3334H12.2667C11.2852 59.3334 10.4488 58.6213 10.2923 57.6524L4.69227 22.9857C4.59879 22.407 4.76387 21.8165 5.14386 21.3702ZM9.01567 24.6667L13.9695 55.3334H50.0305L54.9843 24.6667H9.01567Z" fill="url(#paint0_linear_41_210)"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3333 22.6667C15.3333 12.893 22.6351 4.66675 32 4.66675C41.365 4.66675 48.6667 12.893 48.6667 22.6667C48.6667 23.7713 47.7712 24.6667 46.6667 24.6667C45.5621 24.6667 44.6667 23.7713 44.6667 22.6667C44.6667 14.7674 38.8353 8.66675 32 8.66675C25.1647 8.66675 19.3333 14.7674 19.3333 22.6667C19.3333 23.7713 18.4379 24.6667 17.3333 24.6667C16.2288 24.6667 15.3333 23.7713 15.3333 22.6667Z" fill="url(#paint1_linear_41_210)"/>
@@ -435,5 +438,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="./Assets/js/scrollreveal.min.js"></script>
+    <script src="/Assets/js/index.js"></script>
   </body>
 </html>

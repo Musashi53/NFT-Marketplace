@@ -2,12 +2,13 @@
 .header {
   background-color: var(--glass-color);
   backdrop-filter: blur(10px);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding-top: var(--mb-0-50);
   padding-bottom: var(--mb-0-50);
+  z-index: 100;
 
   &__content {
     display: flex;

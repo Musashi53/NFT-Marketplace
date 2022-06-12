@@ -1,7 +1,11 @@
 .container {
-  max-width: 968px;
+  max-width: 1368px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
+}
+
+.main {
+  overflow: hidden;
 }
 
 .section {
@@ -16,16 +20,16 @@
   }
 
   &__title {
-    margin-top: 4rem;
+    padding: 4rem 0 3rem 0;
     font-size: var(--title-font-size);
   }
 }
 
 .view__all {
+  padding: 4rem 0 3rem 0;
   font-weight: var(--font-bold);
   background: var(--primary-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-top: 4rem;
 }

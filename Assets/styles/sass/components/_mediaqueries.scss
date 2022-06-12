@@ -3,10 +3,6 @@
   .home__content--image {
     width: 50%;
   }
-
-  .bullets__content {
-    width: 300px;
-  }
 }
 
 @media screen and (min-width: 568px) {
@@ -33,39 +29,9 @@
   }
 
   .hidden {
-    &__cards {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    &__card {
-      width: 48%;
-      max-width: 300px;
-    }
-  }
-
-  .card__collections {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-  }
-
-  .card__collection {
-    width: 48%;
-    max-width: 300px;
-  }
-
-  .bullets {
-    &__container {
-      justify-content: space-between;
-      margin-top: 6rem;
-    }
-  
     &__content {
-      width: 45%;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -100,22 +66,6 @@
 
   .input {
     margin-left: var(--mb-2);
-  }
-  
-  .hidden {
-    &__card {
-      width: 31%;
-    }
-  }
-
-  .card__collections {
-    min-width: 200px;
-    justify-content: start;
-  }
-  
-  .card__collection {
-    width: 31%;
-    margin-right: var(--mb-1);
   }
 
   .bullets__content {
@@ -170,33 +120,17 @@
     }
   }
 
-  .hidden {
-    &__card {
-      width: 32%;
-      overflow-x: unset;
-      margin-right: 0.1rem;
+  .collection {
+    &__cards {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     }
+  }
 
+  .hidden {
     &__cards {
       justify-content: space-between;
     }
-  }
-
-  
-
-  .card{
-    &__collections {
-      justify-content: space-between;
-      margin-right: 0;
-    }
-
-    &__collection {
-      width: 220px;
-      margin-right: 0;
-    }
-  }
-
-  
+  }  
 
   .footer{
     &__links__container {
@@ -210,25 +144,35 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
-    margin: auto;
-  }
-
   .home__container {
     margin-top: 20rem;
   }
 
-  .card__collection {
-    width: 230px;
+  .header {
+    &__content {
+      width: 35%;
+    }
+  }
+
+  .input {
+    width: 90%;
   }
 }
 
-@media screen and (min-width: 1268px) {
+@media screen and (min-width: 1168px) {
   body {
     background-size: 40%;
   }
 
   .home {
     margin-top: 25rem;
+  }
+
+
+}
+
+@media screen and (min-width: 1368px) {
+  .container {
+    margin: auto;
   }
 }

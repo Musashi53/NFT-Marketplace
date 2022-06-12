@@ -1,13 +1,13 @@
 /*============================== HIDDEN GEMS ============================*/
 .hidden {
   &__cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 968px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
   }
 
   &__card {
-    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,61 +16,76 @@
     position: relative;
     background: var(--body-color);
     background-clip: padding-box;
-    margin-top: var(--mb-1);
-    margin-bottom: var(--mb-1);
-  }
+    transition: .3s;
 
-  &__card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -2px;
-    border-radius: inherit;
-    background: var(--primary-color);
-  }
-}
+    &:hover {
+      background-color: #FFF;
 
-.card {
-  &__images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-bottom: var(--mb-2);
-  }
-
-  &__user {
-    width: 40px;
-    position: absolute;
-    bottom: -1rem; 
-  }
-
-  &__title {
-    text-align: center;
-    font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-0-50);
-  }
-  
-  &__subtitle {
-    font-size: var(--normal-font-size);
-    display: block;
-    text-align: center;
-    margin-bottom: var(--mb-1);
-
-    &__user {
-      background: var(--secondary-color);
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
+      .hidden__card__title,
+      .hidden__card__subtitle,
+      .hidden__card__description {
+        color: #202020;
+      }
     }
-  }
 
-  &__description {
-    text-align: justify;
-    font-size: var(--normal-font-size);
+    &__images {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-bottom: var(--mb-2);
+    }
+  
+    &__image {
+      width: 100%;
+    }
+  
+    &__user {
+      width: 40px;
+      position: absolute;
+      bottom: -1rem; 
+    }
+  
+    &__title {
+      text-align: center;
+      font-size: var(--h2-font-size);
+      margin-bottom: var(--mb-0-50);
+    }
+    
+    &__subtitle {
+      font-size: var(--normal-font-size);
+      display: block;
+      text-align: center;
+      margin-bottom: var(--mb-1);
+
+      &__user {
+        background: var(--secondary-color);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+
+    
+
+    &__description {
+      text-align: center;
+      font-size: var(--normal-font-size);
+      letter-spacing: .2px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: var(--primary-color);
+    }
   }
 }
